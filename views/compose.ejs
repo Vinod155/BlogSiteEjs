@@ -6,15 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
     <%-include("partials/header") -%>
         <h1>Compose</h1>
-        <form method="post" action=" /compose">
-            <input type="text " name="publish">
-            <button type="submit ">Publish</button>
-        </form>
+        <div class="form-group">
+            <form method="post" action=" /compose">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="postTitle">
+                </div>
+                <div class="form-group">
+                    <label>Post</label>
+                    <textarea name="postText" class="form-control" id="" cols="10" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn-sm btn-primary">Publish</button>
+            </form>
+        </div>
         <%-include("partials/footer") -%>
 </body>
 
